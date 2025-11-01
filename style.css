@@ -93,10 +93,65 @@ nav .nav-links li {
 nav .nav-links a {
     font-weight: bold;
     transition: color 0.3s ease;
+    
 }
 
 nav .nav-links a:hover {
-    color: #0056b3; /* Azul mais escuro no hover */
+    color: #0056b3;
+    /* ======================================= */
+/* ADICIONADO: Estilos do Interruptor     */
+/* ======================================= */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem; /* Espaçamento do menu */
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px; /* Largura */
+    height: 24px; /* Altura */
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; /* Bolinha */
+    width: 18px;  /* Bolinha */
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px); /* Move a bolinha */
+}
+/* ======================================= *//* Azul mais escuro no hover */
 }
 
 /* --- Seção Hero (Início) --- */
@@ -238,6 +293,11 @@ footer {
     }
 
     nav .nav-links li {
+        /* ADICIONADO: Ajuste do interruptor no mobile */
+.theme-switch-wrapper {
+    margin-top: 1rem;
+    margin-left: 0; /* Centraliza com os links */
+}
         margin: 0 0.5rem;
     }
 
@@ -257,4 +317,26 @@ footer {
     .about-content p {
         text-align: center;
     }
+    /* ======================================= */
+/* ADICIONADO: ESTILOS DARK MODE     */
+/* ======================================= */
+
+body.dark-mode {
+    /* Redefine as variáveis globais para o modo escuro */
+    --dark-color: #f4f4f4;        /* Texto principal (agora claro) */
+    --light-color: #3a3a3a;       /* Fundos "claros" (agora cinza escuro) */
+    --background-color: #222;   /* Fundo principal (agora escuro) */
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Ajuste para os .project-card */
+body.dark-mode .project-card {
+    background-color: #333;
+}
+
+/* Ajuste para o rodapé */
+body.dark-mode footer {
+    background-color: #1a1a1a;
+    color: #aaa;
+}
 }

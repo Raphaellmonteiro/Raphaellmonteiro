@@ -97,9 +97,12 @@ nav .nav-links a {
 }
 
 nav .nav-links a:hover {
-    color: #0056b3;
-    /* ======================================= */
+    color: #0056b3; /* Azul mais escuro no hover */
+}
+
+/* ======================================= */
 /* ADICIONADO: Estilos do Interruptor     */
+/* (Este bloco deve estar FORA de outros) */
 /* ======================================= */
 .theme-switch-wrapper {
     display: flex;
@@ -151,8 +154,8 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(26px); /* Move a bolinha */
 }
-/* ======================================= *//* Azul mais escuro no hover */
-}
+/* ======================================= */
+
 
 /* --- Seção Hero (Início) --- */
 #hero {
@@ -293,12 +296,14 @@ footer {
     }
 
     nav .nav-links li {
-        /* ADICIONADO: Ajuste do interruptor no mobile */
-.theme-switch-wrapper {
-    margin-top: 1rem;
-    margin-left: 0; /* Centraliza com os links */
-}
         margin: 0 0.5rem;
+    }
+
+    /* ADICIONADO: Ajuste do interruptor no mobile */
+    /* (Este bloco deve estar FORA de outros) */
+    .theme-switch-wrapper {
+        margin-top: 1rem;
+        margin-left: 0; /* Centraliza com os links */
     }
 
     .hero-content h1 {
@@ -317,8 +322,11 @@ footer {
     .about-content p {
         text-align: center;
     }
-    /* ======================================= */
+}
+
+/* ======================================= */
 /* ADICIONADO: ESTILOS DARK MODE     */
+/* (Este bloco deve estar FORA do @media) */
 /* ======================================= */
 
 body.dark-mode {
@@ -338,5 +346,4 @@ body.dark-mode .project-card {
 body.dark-mode footer {
     background-color: #1a1a1a;
     color: #aaa;
-}
 }

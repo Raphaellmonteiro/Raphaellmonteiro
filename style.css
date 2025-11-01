@@ -58,7 +58,7 @@ section {
     position: fixed; /* Fixa o menu no topo */
     top: 0;
     z-index: 1000;
-    transition: box-shadow 0.3s ease; /* Transição para o JS */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Classe que será adicionada via JS */
@@ -101,6 +101,7 @@ nav .nav-links a:hover {
 
 /* --- Seção Hero (Início) --- */
 #hero {
+    transition: background-color 0.3s ease;
     min-height: 100vh; /* Ocupa a tela inteira */
     display: flex;
     justify-content: center;
@@ -161,6 +162,7 @@ nav .nav-links a:hover {
 
 /* --- Seção Projetos --- */
 #projects {
+    transition: background-color 0.3s ease;
     background-color: var(--light-color);
 }
 
@@ -173,11 +175,11 @@ nav .nav-links a:hover {
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: var(--background-color);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
@@ -213,6 +215,7 @@ nav .nav-links a:hover {
 
 /* --- Rodapé --- */
 footer {
+    transition: background-color 0.3s ease, color 0.3s ease;
     text-align: center;
     padding: 2rem;
     background-color: var(--dark-color);

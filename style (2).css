@@ -1,0 +1,349 @@
+/* --- Configurações Globais --- */
+:root {
+    --primary-color: #007BFF; /* Azul principal */
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --background-color: #fff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave ao clicar nos links */
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--dark-color);
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+section {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    padding: 100px 20px;
+    border-bottom: 1px solid var(--light-color);
+}
+
+/* --- Cabeçalho e Navegação --- */
+#main-header {
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--light-color);
+    width: 100%;
+    position: fixed; /* Fixa o menu no topo */
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Classe que será adicionada via JS */
+#main-header.scrolled {
+    box-shadow: var(--shadow);
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 2rem;
+}
+
+nav .nav-links a {
+    font-weight: bold;
+    transition: color 0.3s ease;
+    
+}
+
+nav .nav-links a:hover {
+    color: #0056b3; /* Azul mais escuro no hover */
+}
+
+/* ======================================= */
+/* ADICIONADO: Estilos do Interruptor     */
+/* (Este bloco deve estar FORA de outros) */
+/* ======================================= */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem; /* Espaçamento do menu */
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px; /* Largura */
+    height: 24px; /* Altura */
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; /* Bolinha */
+    width: 18px;  /* Bolinha */
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px); /* Move a bolinha */
+}
+/* ======================================= */
+
+
+/* --- Seção Hero (Início) --- */
+#hero {
+    transition: background-color 0.3s ease;
+    min-height: 100vh; /* Ocupa a tela inteira */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--light-color);
+    padding-top: 80px; /* Compensa o header fixo */
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Seção Sobre --- */
+#about {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Foto redonda */
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+/* --- Seção Projetos --- */
+#projects {
+    transition: background-color 0.3s ease;
+    background-color: var(--light-color);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Efeito de levantar o card */
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* --- Seção Contato --- */
+#contact {
+    text-align: center;
+}
+
+.social-links a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+}
+
+/* --- Rodapé --- */
+footer {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+/* --- Responsividade (Para Celulares) --- */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav .nav-links {
+        margin-top: 1rem;
+    }
+
+    nav .nav-links li {
+        margin: 0 0.5rem;
+    }
+
+    /* ADICIONADO: Ajuste do interruptor no mobile */
+    /* (Este bloco deve estar FORA de outros) */
+    .theme-switch-wrapper {
+        margin-top: 1rem;
+        margin-left: 0; /* Centraliza com os links */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content p {
+        text-align: center;
+    }
+}
+
+/* ======================================= */
+/* ADICIONADO: ESTILOS DARK MODE     */
+/* (Este bloco deve estar FORA do @media) */
+/* ======================================= */
+
+body.dark-mode {
+    /* Redefine as variáveis globais para o modo escuro */
+    --dark-color: #f4f4f4;        /* Texto principal (agora claro) */
+    --light-color: #3a3a3a;       /* Fundos "claros" (agora cinza escuro) */
+    --background-color: #222;   /* Fundo principal (agora escuro) */
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Ajuste para os .project-card */
+body.dark-mode .project-card {
+    background-color: #333;
+}
+
+/* Ajuste para o rodapé */
+body.dark-mode footer {
+    background-color: #1a1a1a;
+    color: #aaa;
+}

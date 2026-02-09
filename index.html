@@ -1,165 +1,382 @@
-<html lang="pt-br">
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Portfólio Pessoal - Raphaell Monteiro</title>
-
+    <meta name="description" content="Portfólio de Desenvolvedor em Tecnologia da Informação">
+    <title>Meu Portfólio | Desenvolvedor TI</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
+    <!-- Botão de tema -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+        <i class="fas fa-moon"></i>
+    </button>
 
-
-
-    <header id="main-header">
-
-        <nav>
-
-            <div class="logo">
-
-                <a href="#hero">Raphaell Monteiro</a>
-
-            </div>
-
-            <ul class="nav-links">
-
-                
-
-                <li><a href="#hero">Início</a></li>
-
-                <li><a href="#about">Sobre</a></li>
-
-                <li><a href="#projects">Projetos</a></li>
-
-                <li><a href="#contact">Contato</a></li>
-
-            </ul>
-                <div class="theme-switch-wrapper">
-                <label class="theme-switch" for="theme-toggle">
-                    <input type="checkbox" id="theme-toggle" />
-                    <span class="slider round"></span> 
-                </label>
+    <!-- Header/Navegação -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">Portfolio</span>
+                    <span class="logo-bracket">/&gt;</span>
                 </div>
-            
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="#about" class="nav-link">Sobre</a></li>
+                    <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                    <li><a href="#projects" class="nav-link">Projetos</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </nav>
-
     </header>
 
-
-
-    <main>
-
-        <section id="hero">
-
+    <!-- Seção Hero -->
+    <section id="home" class="hero">
+        <div class="container">
             <div class="hero-content">
-
-                <h1>Olá, eu sou Raphaell Monteiro</h1>
-
-                <p>Estudante de Engenharia de Software | Desenvolvedor Python</p>
-
-                <a href="#projects" class="cta-button">Ver Meus Projetos</a>
-
+                <h1 class="hero-title">
+                    Olá, eu sou <span class="highlight">Desenvolvedor</span>
+                </h1>
+                <p class="hero-subtitle">Estudante de Tecnologia da Informação | Desenvolvedor em Formação</p>
+                <div class="hero-description">
+                    <p>Apaixonado por tecnologia, infraestrutura e desenvolvimento de software.</p>
+                    <p>Construindo soluções e expandindo conhecimentos em programação e redes.</p>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                    <a href="#contact" class="btn btn-secondary">Entre em Contato</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
+            <div class="hero-image">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="code-content">
+                        <code>
+                            <span class="code-keyword">def</span> <span class="code-function">aprender_sempre</span>():
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">while</span> <span class="code-constant">True</span>:
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-function">estudar</span>()
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-function">praticar</span>()
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-function">criar_projetos</span>()
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        </section>
-
-
-
-        <section id="about">
-
-            <h2>Sobre Mim</h2>
-
+    <!-- Seção Sobre -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
             <div class="about-content">
-
-                <img src="minha-foto.jpeg" alt="Foto de Raphaell Monteiro" class="profile-pic">
-
-                <p>
-
-                    Bem-vindo ao meu portfólio! Sou um estudante de <strong>Engenharia de Software</strong> apaixonado por resolver problemas e criar soluções tecnológicas. 
-
-                    Tenho focado meus estudos em Python, desenvolvimento de software, conceitos de redes e <strong>banco de dados MySQL</strong>.
-
-                    Estou sempre em busca de novos desafios e oportunidades para aprender.
-
-                </p>
-
+                <div class="about-text">
+                    <p>Sou estudante de <strong>Tecnologia da Informação com foco em Desenvolvimento (TID) / Engenharia de Software</strong>, construindo uma base sólida na área de tecnologia.</p>
+                    
+                    <p>Atualmente, estou aprofundando meus conhecimentos em <strong>Lógica de Programação em Python</strong> através da Udemy, fortalecendo fundamentos essenciais como raciocínio lógico e estrutura de código.</p>
+                    
+                    <p>Na parte prática, trabalho com <strong>infraestrutura e redes</strong>, desenvolvendo projetos que envolvem configuração de servidores, compartilhamento de arquivos e comunicação entre sistemas.</p>
+                    
+                    <p>Tenho grande interesse na integração entre <strong>redes, ciência da computação e inteligência artificial</strong>, buscando entender como essas áreas se conectam na prática para criar soluções inovadoras.</p>
+                    
+                    <p>Aplico o que aprendo através de projetos práticos, documentação técnica e uso de prompts estruturados, sempre complementando com videoaulas e material acadêmico.</p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Formação</h3>
+                        <p>Tecnologia da Informação / Engenharia de Software</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Foco Atual</h3>
+                        <p>Python & Lógica de Programação</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Especialização</h3>
+                        <p>Infraestrutura & Redes</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fas fa-robot"></i>
+                        <h3>Interesse</h3>
+                        <p>Inteligência Artificial</p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-        </section>
-
-
-        <section id="projects">
-
-            <h2>Meus Projetos e Estudos</h2>
-
-            <div class="project-grid">
-
-                
-
-                <div class="project-card">
-
-                    <h3>Conectando Gerações: Inclusão Digital</h3>
-
-                    <p>Projeto em andamento focado em ensinar o uso de smartphones e tecnologias digitais para a melhor idade, promovendo a independência e a conexão familiar.</p>
-
-                    <a href="https://raphaellmonteiro.github.io/conectandogeracoes/" target="_blank">Ver Detalhes</a>
-
+    <!-- Seção Habilidades -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <!-- Programação -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programação</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Python</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Lógica de Programação</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>HTML/CSS/JavaScript</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- Infraestrutura & Redes -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Infraestrutura & Redes</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>SSH (Servidor Seguro)</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Samba (Compartilhamento)</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>FTP</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Redes de Computadores</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="65"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Conhecimentos Gerais -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Conhecimentos</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Estrutura de Dados</span>
+                        <span class="tag">Algoritmos</span>
+                        <span class="tag">Fundamentos da Internet</span>
+                        <span class="tag">Comunicação entre Sistemas</span>
+                        <span class="tag">Inteligência Artificial</span>
+                        <span class="tag">Documentação Técnica</span>
+                        <span class="tag">Git/GitHub</span>
+                        <span class="tag">Linux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projetos em Desenvolvimento</h2>
+            <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Lógica de Programação com Python</h3>
-                    <p>Estudo focado em lógica e sintaxe da linguagem Python através da plataforma <strong>Udemy</strong>, com foco na resolução de problemas e estruturação de dados.</p>
-                    <a href="#" target="_blank">Ver Curso</a>
+                    <div class="project-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Servidor SSH Configurado</h3>
+                    <p>Implementação e configuração de servidor SSH para acesso remoto seguro, incluindo autenticação por chave e boas práticas de segurança.</p>
+                    <div class="project-tags">
+                        <span>SSH</span>
+                        <span>Linux</span>
+                        <span>Segurança</span>
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Banco de Dados MySQL</h3>
-                    <p>Aprofundamento em modelagem de dados e consultas SQL (Structured Query Language) com <strong>MySQL</strong>, utilizando os materiais do <strong>Curso em Vídeo</strong>.</p>
-                    <a href="#" target="_blank">Ver Curso</a>
+                    <div class="project-icon">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <h3>Sistema Samba</h3>
+                    <p>Implementação de compartilhamento de arquivos em rede utilizando Samba, permitindo integração entre sistemas diferentes.</p>
+                    <div class="project-tags">
+                        <span>Samba</span>
+                        <span>Redes</span>
+                        <span>Compartilhamento</span>
+                    </div>
                 </div>
 
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Servidor FTP</h3>
+                    <p>Configuração de servidor FTP para transferência de arquivos, estudando protocolos de comunicação e segurança de dados.</p>
+                    <div class="project-tags">
+                        <span>FTP</span>
+                        <span>Protocolos</span>
+                        <span>Transferência</span>
+                    </div>
+                </div>
 
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Projetos em Python</h3>
+                    <p>Desenvolvimento de scripts e programas aplicando lógica de programação, estruturas de dados e algoritmos em Python.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Algoritmos</span>
+                        <span>Lógica</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Estudos em Redes</h3>
+                    <p>Análise e documentação sobre fundamentos de redes, protocolos de comunicação e estrutura da internet.</p>
+                    <div class="project-tags">
+                        <span>Redes</span>
+                        <span>Internet</span>
+                        <span>Protocolos</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>IA & Automação</h3>
+                    <p>Exploração de conceitos de inteligência artificial e sua aplicação prática com prompts estruturados e automação.</p>
+                    <div class="project-tags">
+                        <span>IA</span>
+                        <span>Automação</span>
+                        <span>Prompts</span>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-        </section>
-        <section id="contact">
+    <!-- Seção Contato -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Vamos Conversar!</h3>
+                    <p>Estou sempre aberto a novas oportunidades, colaborações e conversas sobre tecnologia.</p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>seu.email@exemplo.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Localização</h4>
+                                <p>Mossoró, Rio Grande do Norte</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Status</h4>
+                                <p>Estudante - Disponível para estágios</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <h2>Entre em Contato</h2>
+                    <div class="social-links-contact">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
 
-            <p>Estou aberto a novas oportunidades e colaborações. Me encontre nas redes abaixo!</p>
-
-            <div class="social-links">
-
-                <a href="https://github.com/[SEU-USUARIO-GITHUB]" target="_blank">GitHub</a>
-
-                <a href="https://linkedin.com/in/[SEU-USUARIO-LINKEDIN]" target="_blank">LinkedIn</a>
-
-                <a href="mailto:[SEU-EMAIL@EXEMPLO.COM]">Email</a>
-
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Seu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Assunto" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Sua Mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
             </div>
+        </div>
+    </section>
 
-        </section>
-
-    </main>
-
-
-
-    <footer>
-
-        <p>&copy; 2025 Raphaell Monteiro. Todos os direitos reservados.</p>
-
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Meu Portfólio. Desenvolvido com <i class="fas fa-heart"></i> e muito café ☕</p>
+        </div>
     </footer>
 
-
-
     <script src="script.js"></script>
-
 </body>
-
 </html>

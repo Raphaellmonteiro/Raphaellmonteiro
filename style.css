@@ -38,10 +38,43 @@ h1, h2, h3, .serif {
     font-family: 'Playfair Display', serif;
 }
 
+/* --- Top Bar --- */
+.top-bar {
+    background-color: var(--bg-black);
+    color: var(--text-light);
+    padding: 8px 5%;
+    font-size: 0.7rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1100;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.company-name {
+    font-weight: 700;
+    color: var(--primary-gold);
+}
+
+.company-docs {
+    display: flex;
+    gap: 20px;
+}
+
 /* --- Menu Fixo --- */
 header {
     position: fixed;
-    top: 0;
+    top: 34px; /* Altura da top bar */
     left: 0;
     width: 100%;
     padding: 20px 5%;
@@ -54,6 +87,7 @@ header {
 
 header.scrolled {
     background: var(--bg-black);
+    top: 0; /* Sobe para o topo ao rolar */
     padding: 15px 5%;
     box-shadow: 0 2px 20px rgba(0,0,0,0.2);
 }
